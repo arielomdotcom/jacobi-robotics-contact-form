@@ -1,0 +1,22 @@
+.contact-info {
+  &:not(:last-child) {
+    border-bottom: 1px solid theme('colors.gray.600');
+    padding-bottom: 1.5rem;
+    @screen md {
+      border-bottom: none;
+      padding-bottom: 1rem;
+    }
+  }
+  &-header {
+    text-transform: uppercase;
+    color: theme('colors.gray.400');
+  }
+  &-content,
+  &-detail {
+    overflow: hidden;
+  }
+  &-detail {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

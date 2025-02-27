@@ -1,0 +1,43 @@
+@screen md {
+  .sidebar {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: url("../assets/sidebar-background-shape.svg") no-repeat center
+        center;
+      background-size: contain;
+    }
+  }
+}
+.sidebar-connect-with-us-text {
+  @apply text-xl;
+  @apply font-bold;
+  justify-content: center;
+
+  @screen md {
+    @apply text-sm;
+    @apply font-normal;
+    justify-content: flex-start;
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      width: 30px;
+      height: 2px;
+      background-color: white;
+      transform: translateY(-50%);
+    }
+    &:after {
+      content: ":";
+    }
+  }
+}
